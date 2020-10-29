@@ -1,0 +1,315 @@
+name: chd_app_demo
+description: A new Flutter application.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  barcode_flutter: ^1.1.2
+  barcode_scan: ^1.0.0
+  flushbar: ^1.10.4
+  firebase_analytics: ^5.0.16
+  firebase_core: ^0.4.5
+  firebase_messaging: ^6.0.16
+  firebase_remote_config: ^0.3.1+1
+  flutter_datetime_picker: ^1.3.8
+  flutter_html: ^0.9.8
+  flutter_icons: ^1.1.0
+  flutter_masked_text: ^0.8.0
+  flutter_redux: ^0.5.3
+  flutter_slidable: ^0.4.9
+  flutter_svg: ^0.18.0
+  flutter_webview_plugin: ^0.3.11
+  font_awesome_flutter: ^8.8.1
+  get_it: ^4.0.4
+  google_maps_flutter: ^0.5.28+1
+  gradient_app_bar: ^0.1.3
+  http: ^0.12.2
+  intl: ^0.16.1
+  location: ^2.3.3
+  overlay_container: ^0.0.4+1
+  package_info: ^0.4.1
+  percent_indicator: ^2.1.5
+  permission_handler: ^3.0.1
+  redux_logging: ^0.3.0
+  regexed_validator: ^1.0.4
+  rubber: ^0.4.0
+  share: ^0.6.4+3
+  shared_preferences: ^0.5.8
+  sticky_headers: ^0.1.8+1
+  strings: ^0.1.2
+  timeago: ^2.0.26
+  translator: ^0.1.2
+  uni_links: ^0.4.0
+  url_launcher: ^5.5.0
+  vector_math: ^2.0.8
+  webview_flutter: ^0.3.22+1
+  bottom_sheet_stateful: ^0.1.1
+  cached_network_image: ^2.3.3
+  carousel_slider: ^2.2.1
+  connectivity: ^0.4.9
+  device_info: ^0.4.2+4
+  dotted_border: ^1.0.6
+  dropdown_menu: ^1.1.1
+  enchilada:
+      git: https://github.com/ThyDwimmerlaik/enchilada
+  encrypt: ^4.0.2
+  expandable: ^4.1.4
+  ffcache: ^0.1.3
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: false
+  image_path: "assets/android-icons/android-icon.png"
+  adaptive_icon_background: "assets/android-icons/background.png"
+  adaptive_icon_foreground: "assets/android-icons/brand.png"
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+      - assets/
+      - assets/menuBtn.flr
+      - assets/card.png
+      - assets/lock.png
+      - assets/cel.png
+      - assets/kgIcon.png
+      - assets/svgs/hamburguerIcon.svg
+      - assets/svgs/lemon.svg
+      - assets/svgs/red.svg
+      - assets/svgs/footerIcons/iconTiendaActive.svg
+      - assets/svgs/footerIcons/iconListasActive.svg
+      - assets/svgs/footerIcons/iconBuscarActive.svg
+      - assets/svgs/footerIcons/iconCarritoActive.svg
+      - assets/svgs/footerIcons/iconTienda.svg
+      - assets/svgs/footerIcons/iconListas.svg
+      - assets/svgs/footerIcons/iconBuscar.svg
+      - assets/svgs/footerIcons/iconCarrito.svg
+      - assets/svgs/mc/MC21.svg
+      - assets/svgs/mc/MC22.svg
+      - assets/svgs/mc/MC23.svg
+      - assets/svgs/mc/MC24.svg
+      - assets/svgs/mc/MC25.svg
+      - assets/svgs/mc/MC26.svg
+      - assets/svgs/mc/MC27.svg
+      - assets/svgs/hamburger.svg
+      - assets/svgs/Barcode.svg
+      - assets/svgs/menu-bg.svg
+      - assets/svgs/chedraui-header-white.svg
+      - assets/svgs/chedraui-header.svg
+      - assets/svgs/family_orange.svg
+      - assets/svgs/instrucciones.svg
+      - assets/BagCheckout.gif
+      - assets/svgs/twitterIcon.svg
+      - assets/svgs/youtubeIcon.svg
+      - assets/svgs/facebookIcon.svg
+      - assets/svgs/family.svg
+      - assets/svgs/call.svg
+      - assets/svgs/chd_logo.svg
+      - assets/svgs/chedraui.svg
+      - assets/svgs/chedraui-slogan.svg
+      - assets/checkGreen.png
+      - assets/checkoutConfirmation.png
+      - assets/svgs/filter_icon.svg
+      - assets/svgs/twitter.png
+      - assets/svgs/facebook.svg
+      - assets/svgs/noubicacion.svg
+      - assets/svgs/google.svg
+      - assets/storeMarker.png
+      - assets/locationSet.png
+      - assets/svgs/waldos.svg
+      - assets/svgs/monedero.svg
+      - assets/svgs/paypal.svg
+      - assets/svgs/paypalPay.svg
+      - assets/svgs/amex.svg
+      - assets/svgs/mastercard.svg
+      - assets/svgs/visa.svg
+      - assets/img/productImage.png
+      - assets/svgs/card-visa.svg
+      - assets/svgs/card-visa-selected.svg
+      - assets/svgs/card-mastercard.svg
+      - assets/svgs/card-mastercard-selected.svg
+      - assets/svgs/card-amex.svg
+      - assets/svgs/card-amex-selected.svg
+      - assets/svgs/card-cash.svg
+      - assets/svgs/card-cash-selected.svg
+      - assets/svgs/card-ecoupon.svg
+      - assets/svgs/card-ecoupon-selected.svg
+      - assets/svgs/ubica-tu-tienda.svg
+      - assets/svgs/currentLocationArrow.svg
+      - assets/svgs/scan.svg
+      - assets/svgs/scan_white.svg
+      - assets/svgs/cart.svg
+      - assets/svgs/bill.svg
+      - assets/svgs/user.svg
+      - assets/svgs/applePay.svg
+      - assets/svgs/orderInProgress.svg
+      - assets/svgs/orderDelivered.svg
+      - assets/svgs/orderPending.svg
+      - assets/svgs/orderCancelled.svg
+      - assets/svgs/094711179f.svg
+      - assets/svgs/DeliveryVan.svg
+      - assets/svgs/balance.svg
+      - assets/svgs/Deliver.svg
+      - assets/svgs/refresh.svg
+      - assets/pagoDeServicios.png
+      - assets/misPedidos.png
+      - assets/scan.png
+      - assets/marketing.png
+      - assets/notificaciones.png
+      - assets/notifiacionesClean.png
+      - assets/monedero_azul.png
+      - assets/american.png
+      - assets/barcode.png
+      - assets/interest/autos.png
+      - assets/interest/bebes.png
+      - assets/interest/belleza.png
+      - assets/interest/diabeticos.png
+      - assets/interest/gourmet.png
+      - assets/interest/hogar.png
+      - assets/interest/fitness_aparatos_ropa.png
+      - assets/interest/fitness_comida.png
+      - assets/interest/kosher-certification-service-500x500.png
+      - assets/interest/mascotas.png
+      - assets/interest/ninios.png
+      - assets/interest/renueva_tu_hogar.png
+      - assets/interest/techies.png
+      - assets/interest/vinos.png
+      - assets/DeliveryVan.png
+      - assets/chd_logo.png
+      - assets/img/american_express.png
+      - assets/img/calender.png
+      - assets/img/card_cvv.png
+      - assets/img/dinners_club.png
+      - assets/img/discover.png
+      - assets/img/jcb.png
+      - assets/img/mastercard.png
+      - assets/img/productImage.png
+      - assets/img/verve.png
+      - assets/img/visa.png
+      - assets/img/amex.png
+      - assets/img/invalid.png
+      - assets/img/chat_icon.png
+      - assets/productNotFound.png
+      - assets/cupon.png
+      - assets/cuponesadd.png
+      - assets/chedraui_family.png
+      - assets/094711179f@3x.png
+      - assets/store.png
+      - assets/loading1.gif
+      - assets/loading2.gif
+      - assets/svgs/envio_checkout.svg
+      - assets/svgs/pedidos_checkout.svg
+      - assets/svgs/monedero_checkout.svg
+      - assets/svgs/EnableNotifications.svg
+
+      # - assets/oval.png
+      # - assets/1.png
+      # - assets/2.jpg
+      # - assets/3.png
+      # - assets/4.png
+      # - assets/5.png
+      # - assets/ubica.jpg
+      # - assets/MC21.png
+      # - assets/MC22.png
+      # - assets/MC23.png
+      # - assets/MC24.png
+      # - assets/MC25.png
+      # - assets/MC26.png
+      # - assets/MC27.png
+      # - assets/s8.png
+      # - assets/product.png
+  #   - assets/raw/publickey.pem
+  #   - assets/raw/private.pem
+  #  - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  fonts:
+  - family: Rubik
+    fonts:
+      - asset: assets/fonts/Rubik/Rubik-Light.ttf               #300
+      - asset: assets/fonts/Rubik/Rubik-LightItalic.ttf         #300
+      - asset: assets/fonts/Rubik/Rubik-Regular.ttf             #400
+      - asset: assets/fonts/Rubik/Rubik-Medium.ttf              #500
+      - asset: assets/fonts/Rubik/Rubik-MediumItalic.ttf        #500
+      - asset: assets/fonts/Rubik/Rubik-Bold.ttf                #700
+      - asset: assets/fonts/Rubik/Rubik-BoldItalic.ttf          #700
+      - asset: assets/fonts/Rubik/Rubik-Black.ttf               #900
+      - asset: assets/fonts/Rubik/Rubik-BlackItalic.ttf         #900
+
+  - family: Archivo
+    fonts:
+      - asset: assets/fonts/Archivo/Archivo-Regular.ttf             #400
+      - asset: assets/fonts/Archivo/Archivo-Italic.ttf             #400
+      - asset: assets/fonts/Archivo/Archivo-Medium.ttf              #500
+      - asset: assets/fonts/Archivo/Archivo-MediumItalic.ttf        #500
+      - asset: assets/fonts/Archivo/Archivo-SemiBold.ttf                #700
+      - asset: assets/fonts/Archivo/Archivo-SemiBoldItalic.ttf          #700
+      - asset: assets/fonts/Archivo/Archivo-Bold.ttf                #700
+      - asset: assets/fonts/Archivo/Archivo-BoldItalic.ttf          #700
+  - family: Archivo Black
+    fonts:
+      - asset: assets/fonts/Archivo_Black/ArchivoBlack-Regular.ttf             #400
+  # - family: Raleway
+  #   fonts:
+  #     - asset: assets/fonts/Raleway/Raleway-Regular.ttf
+  #     - asset: assets/fonts/Raleway/Raleway-Italic.ttf
+  #     - asset: assets/fonts/Raleway/Raleway-Bold.ttf
+  #     - asset: assets/fonts/Raleway/Raleway-ExtraBold.ttf
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages

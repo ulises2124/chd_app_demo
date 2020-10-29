@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "209434655822",
+    "firebase_url": "https://chedrauiappdemo.firebaseio.com",
+    "project_id": "chedrauiappdemo",
+    "storage_bucket": "chedrauiappdemo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209434655822:android:36a81afcb101749c85971f",
+        "android_client_info": {
+          "package_name": "com.example.chd_app_demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "209434655822-5occkef6tvbl32klj1kflnbr5petb1m1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCcX9ApvmiUXRM0_MS-eR0I9c7lAiHTO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "209434655822-5occkef6tvbl32klj1kflnbr5petb1m1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "209434655822-vu7e4vq7vrb81iveb7ve30if4jjgldif.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.chdAppDemo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

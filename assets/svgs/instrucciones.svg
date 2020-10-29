@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="73px" height="22px" viewBox="0 0 73 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 55.2 (78181) - https://sketchapp.com -->
+    <title>2CBEC199-26AF-40E3-B60B-692CF1C46A66</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <filter x="-9.5%" y="-32.1%" width="118.9%" height="156.3%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="-5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="User-Flow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Product-Page---piece-option-open" transform="translate(-150.000000, -1190.000000)" fill="#C4CDD5">
+            <g id="Quantity-Toggle" filter="url(#filter-1)" transform="translate(0.000000, 1188.000000)">
+                <g id="Group">
+                    <rect id="Rectangle-Copy" x="158" y="15" width="57" height="6" rx="3"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

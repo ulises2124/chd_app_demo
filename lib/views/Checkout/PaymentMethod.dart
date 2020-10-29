@@ -1,0 +1,1 @@
+enum PaymentMethod { registredCard, card, paypal, associatedStore, onDelivery, onStore, monedero }

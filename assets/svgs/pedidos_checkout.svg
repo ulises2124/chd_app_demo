@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>pedidos</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Desglose-Ticket-Online-Copy-3" transform="translate(-67.000000, -281.000000)" stroke="#0D47A1" stroke-width="2">
+            <g id="pedidos" transform="translate(67.000000, 281.000000)">
+                <g id="icon" transform="translate(12.500000, 12.500000) scale(-1, 1) translate(-12.500000, -12.500000) translate(3.571429, 2.678571)">
+                    <path d="M9.72321429,0.401785714 L16.8660714,3.97321429 C17.4729086,4.27475894 17.8567833,4.89380002 17.8571429,5.57142857 L17.8571429,14.0803571 C17.8567833,14.7579857 17.4729086,15.3770268 16.8660714,15.6785714 L9.72321429,19.25 C9.2202072,19.5017049 8.62800708,19.5017049 8.125,19.25 L0.982142857,15.6785714 C0.375886076,15.3730973 -0.00472440729,14.7502801 -4.34796367e-05,14.0714286 L-4.34796367e-05,5.57142857 C0.000359576154,4.89380002 0.384234216,4.27475894 0.991071429,3.97321429 L8.13392857,0.401785714 C8.63449341,0.153048974 9.22264944,0.153048974 9.72321429,0.401785714 Z" id="Path"></path>
+                    <polyline id="Path" points="0.285714286 4.60714286 8.92857143 8.92857143 17.5714286 4.60714286"></polyline>
+                    <line x1="8.97321429" y1="19.4285714" x2="8.97321429" y2="8.92857143" id="Path"></line>
+                    <line x1="12.9910714" y1="10.7142857" x2="12.9910714" y2="7.14285714" id="Path"></line>
+                    <line x1="4.46428571" y1="2.23214286" x2="13.3928571" y2="6.69642857" id="Path"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
