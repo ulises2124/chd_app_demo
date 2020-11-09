@@ -76,12 +76,12 @@ class _ProductPageState extends State<ProductPage> {
     productResponse = searchProduct();
     getPreferences().then((x) {
       setState(() {
-        // prefs.clear();
+         prefs.clear();
         _isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
       });
     });
     super.initState();
-    //searchProduct();
+    searchProduct();
   }
 
   Future searchProduct() async {

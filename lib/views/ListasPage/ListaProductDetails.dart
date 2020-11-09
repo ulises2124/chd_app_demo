@@ -1616,16 +1616,16 @@ class _ProductsSliderState2 extends State<ProductsSlider2> {
 
   @override
   initState() {
-    // getPreferences().then((x) {
-    //   setState(() {
-    //     // prefs.clear();
-    //     _isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
-    //     if (_isLoggedIn == true) {
-    //       listID = prefs.getString('favoriteListID');
-    //       getLista();
-    //     }
-    //   });
-    // });
+     getPreferences().then((x) {
+       setState(() {
+          prefs.clear();
+         _isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
+         if (_isLoggedIn == true) {
+           listID = prefs.getString('favoriteListID');
+           getLista();
+         }
+       });
+     });
     super.initState();
     favorite = Icon(Icons.favorite_border, size: 18.0);
     getProducts();
