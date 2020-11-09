@@ -1195,7 +1195,10 @@ class _LoginPageState extends State<LoginPage> {
           store.dispatch(LogIn());
           FireBaseEventController.sendAnalyticsEventLogin(_loginMethod).then((ok) {});
           Navigator.pop(context);
-          if (widget.route != null) {
+
+          //Detalle con el inicio de sesión
+
+         /* if (widget.route != null) {
             Navigator.of(context).pushAndRemoveUntil(
               MaterialPageRoute(
                 settings: RouteSettings(name: widget.route),
@@ -1212,7 +1215,7 @@ class _LoginPageState extends State<LoginPage> {
             );
           } else {
             Navigator.pushReplacementNamed(context, DataUI.initialRoute);
-          }
+          }*/
         }
       } catch (e) {
         setState(() {
@@ -1415,7 +1418,7 @@ class _LoginPageState extends State<LoginPage> {
               store.dispatch(LogIn());
               FireBaseEventController.sendAnalyticsEventLogin(_loginMethod).then((ok) {});
               Navigator.pop(context);
-              if (widget.route != null) {
+            /*  if (widget.route != null) {
                 Navigator.of(context).pushAndRemoveUntil(
                   MaterialPageRoute(
                     settings: RouteSettings(name: widget.route),
@@ -1432,7 +1435,7 @@ class _LoginPageState extends State<LoginPage> {
                 );
               } else {
                 Navigator.pushReplacementNamed(context, DataUI.initialRoute);
-              }
+              }*/
             } else {
               setState(() {
                 _isLoading = false;

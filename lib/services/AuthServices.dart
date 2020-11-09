@@ -107,12 +107,14 @@ class AuthServices {
   static Future postGCloudSignIn(SinginUserData singinUserData) async {
     String url = NetworkData.gCloudSignIn;
     var headers = {"Content-Type": "application/json"};
+    print(url);
     Map data = {'nombre': singinUserData.nombre, 'apPaterno': singinUserData.paterno, 'apMaterno': singinUserData.materno != null ? (singinUserData.materno.length > 1 ? singinUserData.materno : "--") : "--", 'correo': singinUserData.email, 'contrasenia': singinUserData.password, 'celular': singinUserData.celular, 'cp': singinUserData.cpostal};
     var response = await HttpHelper.post(
       url,
       headers: headers,
       body: utf8.encode(json.encode(data)),
     );
+
 
     if (response.statusCode != null) {
       final resBody = json.decode(response.body);
