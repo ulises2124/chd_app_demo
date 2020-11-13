@@ -19,6 +19,7 @@ class MenuScreen extends StatefulWidget {
   final MenuItem selectedItemId;
   final Function onMenuItemSelected;
 
+
   MenuScreen({
     Key key,
     this.selectedItemId,
@@ -35,6 +36,7 @@ class _MenuScreenState extends State<MenuScreen> with TickerProviderStateMixin {
   double selectorYTop;
   double selectorYBottom;
   String userName = '';
+  SharedPreferences prefs;
 //////////////////////////////////  INIT VARIABLES //////////////////////////////////
 
   @override
@@ -57,14 +59,22 @@ class _MenuScreenState extends State<MenuScreen> with TickerProviderStateMixin {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
       userName = prefs.getString('account-userName') ?? '';
+       if (prefs.getBool('isLoggedIn') == null) {
+         _isLoggedIn = false;
+       } else {
+         _isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
+       }
+
     });
   }
+
+
 //////////////////////////////////  WIDGET BUILD //////////////////////////////////
 
   @override
   Widget build(BuildContext context) {
     final store = StoreProvider.of<AppState>(context);
-    _isLoggedIn = store.state.isSessionActive;
+
     return new ZoomScaffoldMenuController(
       builder: (BuildContext context, MenuController menuController) {
         var shouldRenderSelector = true;

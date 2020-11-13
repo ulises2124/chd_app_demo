@@ -44,6 +44,8 @@ class FooterNavigation extends StatefulWidget {
     this.contentScreen,
   });
 
+
+
   @override
   _FooterNavigationState createState() => _FooterNavigationState();
 }

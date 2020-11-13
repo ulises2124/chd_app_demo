@@ -1,9 +1,15 @@
 // import 'package:firebase_auth/firebase_auth.dart';
 // import 'package:flutter/foundation.dart';
 
-class LogIn {}
+class LogIn {
 
-class LogOut {}
+
+}
+
+class LogOut {
+
+
+}
 
 // class LogInSuccessful {
 //   final FirebaseUser user;

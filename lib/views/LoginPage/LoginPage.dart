@@ -1192,6 +1192,7 @@ class _LoginPageState extends State<LoginPage> {
             _loginResult = null;
           });
           final store = StoreProvider.of<AppState>(context);
+          print(store.state.isSessionActive);
           store.dispatch(LogIn());
           FireBaseEventController.sendAnalyticsEventLogin(_loginMethod).then((ok) {});
           Navigator.pop(context);

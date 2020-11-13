@@ -225,6 +225,7 @@ class _CarritoPageState extends State<CarritoPage> {
     prefs = await SharedPreferences.getInstance();
     setState(() {
       _isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
+      print(_isLoggedIn);
     });
   }
 
