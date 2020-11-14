@@ -11,7 +11,7 @@ import 'package:chd_app_demo/views/SearchPage/SearchPage.dart';
 import 'package:chd_app_demo/widgets/SvgWidgets.dart';
 import 'package:chd_app_demo/widgets/notSignedIn.dart';
 import 'package:flutter/material.dart';
-
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:redux/redux.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:chd_app_demo/redux/models/AppState.dart';
@@ -19,6 +19,7 @@ import 'package:chd_app_demo/redux/models/AppState.dart';
 class _ViewModel {
   final int shoppingCartQuantity;
   final bool isSessionActive;
+  SharedPreferences prefs;
 
   _ViewModel({
     @required this.shoppingCartQuantity,
@@ -54,9 +55,22 @@ class _FooterNavigationState extends State<FooterNavigation> {
   int count = 0;
   int selectedIndex = 0;
   MenuItem contentScreen;
+  SharedPreferences prefs;
+  bool  _isLoggedIn = false;
+
+  Future getPreferences() async {
+    prefs = await SharedPreferences.getInstance();
+    setState(() {
+      _isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
+      print(_isLoggedIn);
+    });
+  }
+
 
   @override
   void initState() {
+
+    getPreferences();
     if (widget.mainNavigation) {
       switch (widget.contentScreen.id) {
         case 'listas':
@@ -167,7 +181,7 @@ class _FooterNavigationState extends State<FooterNavigation> {
                     );
                     break;
                   case 1:
-                    if (vm.isSessionActive) {
+                    if (_isLoggedIn) {
                       contentScreen = MenuItem(
                         id: DataUI.listasRoute,
                         title: 'Mis Listas',
@@ -219,7 +233,7 @@ class _FooterNavigationState extends State<FooterNavigation> {
                       MaterialPageRoute(
                         settings: RouteSettings(name: DataUI.listasRoute),
                         builder: (BuildContext context) => MasterPage(
-                          initialWidget: vm.isSessionActive
+                          initialWidget: _isLoggedIn
                               ? MenuItem(
                                   id: DataUI.listasRoute,
                                   title: 'Mis Listas',
@@ -231,7 +245,7 @@ class _FooterNavigationState extends State<FooterNavigation> {
                                   id: DataUI.listasRoute,
                                   title: 'Mis Listas',
                                   screen: NotSignedInWidget(
-                                    message: 'Para poder vizualizar o crear tus listas de compras, por favor inicia sesi��n y disfruta de todos los beneficios de la nueva tienda Chedraui',
+                                    message: 'Para poder vizualizar o crear tus listas de compras, por favor inicia sesi��n y disfruta de todos los beneficios de la nueva tienda Chedraui22',
                                   ),
                                   color: DataUI.chedrauiColor2,
                                   textColor: DataUI.primaryText,

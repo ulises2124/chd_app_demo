@@ -112,6 +112,10 @@ class DeliveryMethodPageState extends State<DeliveryMethodPage> with TickerProvi
   Future tiendasResponse;
   Future getPreferences() async {
     prefs = await SharedPreferences.getInstance();
+    setState(() {
+      _isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
+      print(_isLoggedIn);
+    });
   }
 
 ////////////////////////////////////////// WIDGET BUILD /x///////////////////////////////////////
@@ -119,7 +123,7 @@ class DeliveryMethodPageState extends State<DeliveryMethodPage> with TickerProvi
   @override
   Widget build(BuildContext context) {
     final store = StoreProvider.of<AppState>(context);
-    _isLoggedIn = store.state.isSessionActive;
+   // _isLoggedIn = store.state.isSessionActive;
     _itemsAmount = store.state.shoppingCartQuantity;
     return WidgetContainer(
       WillPopScope(
