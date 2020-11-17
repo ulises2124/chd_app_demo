@@ -1193,10 +1193,13 @@ class _LoginPageState extends State<LoginPage> {
           });
           final store = StoreProvider.of<AppState>(context);
           print(store.state.isSessionActive);
+          print("Login exitosoooo!!!!!!!");
+
+          prefs.setBool('isLoggedIn', true);
           store.dispatch(LogIn());
           FireBaseEventController.sendAnalyticsEventLogin(_loginMethod).then((ok) {});
-          Navigator.pop(context);
-
+         // Navigator.pop(context);
+          Navigator.pushReplacementNamed(context, DataUI.initialRoute);
           //Detalle con el inicio de sesión
 
          /* if (widget.route != null) {
