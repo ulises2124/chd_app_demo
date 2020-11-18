@@ -29,7 +29,6 @@ class UserProfileServices {
         'apellidoMaterno': updateUserData.apellidoMaterno,
         'fechaNacimiento': formattedDate,
         'genero': updateUserData.genero,
-        'telefonoCelular': updateUserData.telefonoCelular,
         'telefonoCasa': updateUserData.telefonoCasa,
       }
     };
