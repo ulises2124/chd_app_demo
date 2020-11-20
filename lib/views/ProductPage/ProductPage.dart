@@ -76,7 +76,7 @@ class _ProductPageState extends State<ProductPage> {
     productResponse = searchProduct();
     getPreferences().then((x) {
       setState(() {
-         prefs.clear();
+       //  prefs.clear();
         _isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
       });
     });
@@ -1067,7 +1067,9 @@ class _BuyProductState extends State<BuyProduct> {
       }
       if (result != null) {
         if (result['err'] == null) {
+          print(result);
           List cartModifications = result['cartModifications'];
+
           if (cartModifications != null) {
             if (cartModifications.length > 0) {
               var statusCode = cartModifications[0]['statusCode'];

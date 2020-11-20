@@ -1196,6 +1196,7 @@ class _LoginPageState extends State<LoginPage> {
           print("Login exitosoooo!!!!!!!");
 
           prefs.setBool('isLoggedIn', true);
+          prefs.setString('email', _email);
           store.dispatch(LogIn());
           FireBaseEventController.sendAnalyticsEventLogin(_loginMethod).then((ok) {});
          // Navigator.pop(context);

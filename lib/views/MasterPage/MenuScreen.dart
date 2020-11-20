@@ -74,7 +74,8 @@ class _MenuScreenState extends State<MenuScreen> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     final store = StoreProvider.of<AppState>(context);
-
+    print("Menu screen sesion!!!");
+     print(_isLoggedIn);
     return new ZoomScaffoldMenuController(
       builder: (BuildContext context, MenuController menuController) {
         var shouldRenderSelector = true;
