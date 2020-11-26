@@ -19,8 +19,8 @@ class HttpHelper {
   static const OK = 'OK';
   static const ERROR = 'ERROR';
   static const UNDEFINED = 'UNDEFINED';
-  static const TIMEOUT = Duration(seconds: 30);
-  static const TIMEOUT_EXTENDED = Duration(seconds: 60);
+  static const TIMEOUT = Duration(seconds: 60);
+  static const TIMEOUT_EXTENDED = Duration(seconds: 70);
 
   /* HttpHelper(this.url, this.headers, this.body); */
 

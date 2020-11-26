@@ -139,10 +139,22 @@ class _NewCreditCardState extends State<NewCreditCard> {
       });
 
       const platform = const MethodChannel('com.cheadrui.com/decypher');
-
       String deviceSessionId;
-      const platformId = const MethodChannel('com.cheadrui.com/paymethods');
-      deviceSessionId = await platformId.invokeMethod('getID');
+      var platformId;
+      try {
+        platformId = const MethodChannel('com.cheadrui.com/paymethods');
+
+        deviceSessionId = await platformId.invokeMethod('getID');
+    } on Exception catch (exception) {
+        print(exception);
+        _showResponseDialog("Ocurrió un error al registrar su método de pago.");
+    } catch (error) {
+        print(error);
+        _showResponseDialog("Ocurrió un error al registrar su método de pago.");
+    }
+
+
+
 
       CardData cardToSave = new CardData();
       cardToSave.idWallet = await idWallet;
