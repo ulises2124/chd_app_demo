@@ -302,13 +302,20 @@ class DeliveryMethodPageState extends State<DeliveryMethodPage> with TickerProvi
 
   @override
   void initState() {
-    BitmapDescriptor.fromAssetImage(ImageConfiguration(devicePixelRatio: 3.0), 'assets/storeMarker.png').then((onValue) {
+
+
+
+    BitmapDescriptor.fromAssetImage(
+        ImageConfiguration(size: Size(3, 3), devicePixelRatio: 1.0), 'assets/storeMarker.png')
+        .then((onValue) {
       pinLocationIconStores = onValue;
     }).catchError((onError) {
       print(onError);
     });
     ;
-    BitmapDescriptor.fromAssetImage(ImageConfiguration(devicePixelRatio: 3.0), 'assets/locationSet.png').then((onValue) {
+    BitmapDescriptor.fromAssetImage(
+        ImageConfiguration(size: Size(1, 1), devicePixelRatio: 1.0), 'assets/locationSet.png')
+        .then((onValue) {
       pinLocationIcon = onValue;
     }).catchError((onError) {
       print(onError);
